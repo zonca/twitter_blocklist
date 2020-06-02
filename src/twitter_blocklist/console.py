@@ -4,12 +4,11 @@ import twitter
 
 from . import __version__
 
-
 @click.command()
 @click.version_option(version=__version__)
 @click.option('--export/--no-export', default=False)
 @click.argument('filename')
-def main(export, filename, credentials):
+def main(export, filename):
 
     api = twitter.Api(**toml.load("twitter_keys.toml"))
 
