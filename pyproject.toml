@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "twitter_blocklist"
-version = "0.1.0"
+version = "0.2.0"
 description = "Export and import Twitter blocklists"
 authors = ["Andrea Zonca <code@andreazonca.com>"]
 license = "MIT"
@@ -15,9 +15,9 @@ click = "^7.1.2"
 
 [tool.poetry.dev-dependencies]
 
+[tool.poetry.scripts]
+twitter_blocklist = "twitter_blocklist.console:main"
 [build-system]
 requires = ["poetry>=0.12"]
 build-backend = "poetry.masonry.api"
 
-[tool.poetry.scripts]
-twitter_blocklist = "twitter_blocklist.console:main"
