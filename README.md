@@ -15,6 +15,11 @@ or block all member of a Twitter list:
 
     $ twitter_blocklist --list <list_id>
 
+undo blocking with the --unblock flag:
+
+    $ twitter_blocklist --unblock --list <list_id>
+    $ twitter_blocklist --unblock list_to_unblock.csv
+
 The files have a CSV extension but they are actually just text files with 1 Twitter
 user ID per line.
 
