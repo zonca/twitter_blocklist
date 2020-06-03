@@ -19,4 +19,7 @@ def main(export, filename):
     else:
         with open(filename, "r") as f:
             for user_id in f.readlines():
-                api.CreateBlock(user_id=int(user_id))
+                try:
+                    api.CreateBlock(user_id=int(user_id))
+                except Exception as e:
+                    print(e)
