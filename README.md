@@ -11,6 +11,10 @@ or import a list from someone else, or downloaded from <https://blocktogether.or
 
     $ twitter_blocklist list_to_import.csv
 
+or block all member of a Twitter list:
+
+    $ twitter_blocklist --list <list_id>
+
 The files have a CSV extension but they are actually just text files with 1 Twitter
 user ID per line.
 
