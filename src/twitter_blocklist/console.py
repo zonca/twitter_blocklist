@@ -20,7 +20,7 @@ def main(export, list, unblock, filename):
     if export:
         with open(filename, "w") as f:
             for user in api.GetBlocks():
-                f.write(str(user.id) + "\n")
+                f.write(str(int(user.id)) + "\n")
         sys.exit(0)
 
     if list:
