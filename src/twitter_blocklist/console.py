@@ -15,12 +15,12 @@ from . import __version__
 @click.argument("filename")
 def main(export, list, unblock, filename):
 
-    api = twitter.Api(**toml.load("twitter_keys.toml"))
+    api = twitter.Api(**toml.load("twitter_keys.toml"), sleep_on_rate_limit=True)
 
     if export:
+        blocks_ids = api.GetBlocksIDs(stringify_ids=True)
         with open(filename, "w") as f:
-            for user in api.GetBlocks():
-                f.write(str(int(user.id)) + "\n")
+            f.writelines("\n".join(blocks_ids))
         sys.exit(0)
 
     if list:
