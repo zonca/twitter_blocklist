@@ -23,6 +23,12 @@ undo blocking with the --unblock flag:
 The files have a CSV extension but they are actually just text files with 1 Twitter
 user ID per line.
 
+Consider that Twitter rate-limits their APIs, I have setup the client to automatically
+sleep in case of a rate-limiting error, in case that happens, just leave the script
+running and it will complete at some point. For example exporting the blocks needs
+to make 1 request every 5000 blocked IDs, so you could hit the limit of 15 requests
+every 15 minutes, in that case the script will sleep for 15 minutes and then resume.
+
 ## Install
 
     $ pip install twitter_blocklist
