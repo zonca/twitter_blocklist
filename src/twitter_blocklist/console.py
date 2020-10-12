@@ -4,8 +4,8 @@ from progressbar import progressbar
 import twitter
 import sys
 
+from .utils import authenticate
 from . import __version__
-
 
 @click.command()
 @click.version_option(version=__version__)
@@ -15,7 +15,7 @@ from . import __version__
 @click.argument("filename")
 def main(export, list, unblock, filename):
 
-    api = twitter.Api(**toml.load("twitter_keys.toml"), sleep_on_rate_limit=True)
+    api = authenticate()
 
     if export:
         blocks_ids = api.GetBlocksIDs(stringify_ids=True)
