@@ -7,7 +7,19 @@ Export and import Twitter blocklists.
 
 ## Execute on Google Colaboratory
 
-Coming soon
+It can also be used in the Google Colaboratory Notebook without installing anything
+in the local machine, this also includes the documentation:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zonca/twitter_blocklist/blob/master/run_twitter_blocklist.ipynb)
+
+
+## Documentation and execution
+
+It can also be executed from a Notebook, which also includes instructions
+for setting it up and step-by-step explanation, see:
+
+* <`run_twitter_blocklist.ipynb`>
+
 
 ## Quick reference
 
