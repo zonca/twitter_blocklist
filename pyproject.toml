@@ -29,7 +29,3 @@ twitter_blocklist = "twitter_blocklist.console:main"
 [build-system]
 requires = ["poetry>=0.12"]
 build-backend = "poetry.masonry.api"
-
-[tool.pytest.ini_options]
-minversion = "6.0"
-addopts = "--nbval --current-env"
