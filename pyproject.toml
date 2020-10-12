@@ -8,7 +8,7 @@ readme = "README.md"
 repository = "https://github.com/zonca/twitter_blocklist"
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.6"
 python-twitter = "^3.5"
 toml = "^0.10.1"
 click = "^7.1.2"
