@@ -1,6 +1,7 @@
 import twitter
 import toml
 
+
 def authenticate():
     """Authenticate to the Twitter API
 
