@@ -18,9 +18,9 @@ def main(export, list, unblock, filename):
     api = authenticate()
 
     if export:
-        blocks_ids = api.GetBlocksIDs(stringify_ids=True)
         with open(filename, "w") as f:
-            f.writelines("\n".join(blocks_ids))
+            for user in api.GetBlocks():
+                f.write("{},{}\n".format(user.id_str, user.screen_name))
         sys.exit(0)
 
     if list:
