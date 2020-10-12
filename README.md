@@ -18,7 +18,7 @@ in the local machine, this also includes the documentation:
 It can also be executed from a Notebook, which also includes instructions
 for setting it up and step-by-step explanation, see:
 
-* <run_twitter_blocklist.ipynb>
+* [`run_twitter_blocklist.ipynb`](run_twitter_blocklist.ipynb)
 
 
 ## Quick reference
