@@ -2,6 +2,12 @@
 
 Export and import Twitter blocklists.
 
+## Execute on Google Colaboratory
+
+Coming soon
+
+## Quick reference
+
 `twitter_blocklist` provides a command-line tool to export a list of all
 the accounts you block to a text file:
 
@@ -19,9 +25,6 @@ undo blocking with the --unblock flag:
 
     $ twitter_blocklist --unblock --list <list_id>
     $ twitter_blocklist --unblock list_to_unblock.csv
-
-The files have a CSV extension but they are actually just text files with 1 Twitter
-user ID per line.
 
 Consider that Twitter rate-limits their APIs, I have setup the client to automatically
 sleep in case of a rate-limiting error, in case that happens, just leave the script
