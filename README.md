@@ -1,3 +1,6 @@
+![Python package](https://github.com/zonca/twitter_blocklist/workflows/Python%20package/badge.svg)
+[![PyPI version](https://badge.fury.io/py/twitter-blocklist.svg)](https://badge.fury.io/py/twitter-blocklist)
+
 # `twitter_blocklist`
 
 Export and import Twitter blocklists.
