@@ -32,6 +32,16 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install .[test]
+    - name: Reset test bot blocks
+      env:
+        TWITTER_CONSUMER_KEY: ${{ secrets.TWITTER_CONSUMER_KEY }}
+        TWITTER_CONSUMER_SECRET: ${{ secrets.TWITTER_CONSUMER_SECRET }}
+        TWITTER_ACCESS_TOKEN_KEY: ${{ secrets.TWITTER_ACCESS_TOKEN_KEY }}
+        TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+      run: |
+        twitter_blocklist --export current_blocks.csv
+        twitter_blocklist --unblock current_blocks.csv
+        twitter_blocklist .github/workflow/my_blocks_backup.csv
     - name: Test with pytest
       env:
         TWITTER_CONSUMER_KEY: ${{ secrets.TWITTER_CONSUMER_KEY }}
