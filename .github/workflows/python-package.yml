@@ -50,6 +50,5 @@ jobs:
         pytest
     - name: Wait for Twitter API rate limits to reset
       if: ${{ matrix.python-version!=3.8 }}
-      uses: jakejarvis/wait-action@master
-      with:
-        time: '15m'
+      run: |
+        sleep 15m
