@@ -48,3 +48,7 @@ jobs:
         TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
       run: |
         pytest
+    - name: Wait for Twitter API rate limits to reset
+      uses: jakejarvis/wait-action@master
+      with:
+        time: '15m'
