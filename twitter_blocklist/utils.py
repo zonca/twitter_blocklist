@@ -3,7 +3,7 @@ import twitter
 import toml
 
 
-def authenticate(auth_dict=None):
+def authenticate(auth_dict=None, twitter_keys_filename="twitter_keys.toml"):
     """Authenticate to the Twitter API
 
     It supports 3 ways of authenticating (in this order):
@@ -12,7 +12,7 @@ def authenticate(auth_dict=None):
     * set the environment variables:
             TWITTER_CONSUMER_KEY,TWITTER_CONSUMER_SECRET,TWITTER_ACCESS_TOKEN_KEY,
             TWITTER_ACCESS_TOKEN_SECRET
-    * loads a ``twitter_keys.toml`` file in the current folder
+    * loads a TOML file (by default twitter_keys.toml in the current folder)
 
     Returns
     -------
@@ -29,6 +29,6 @@ def authenticate(auth_dict=None):
             ]
             auth_dict = {k: os.environ["TWITTER_" + k.upper()] for k in keys}
         else:
-            auth_dict = toml.load("twitter_keys.toml")
+            auth_dict = toml.load(twitter_keys_filename)
     api = twitter.Api(**auth_dict, sleep_on_rate_limit=True)
     return api
