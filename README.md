@@ -1,3 +1,9 @@
+## DEPRECATION NOTICE
+
+Looking at https://developer.twitter.com/en/portal/products/free, the free API V2 access only supports a minimal subset of the API.
+To manage your own blocks you would need the "Basic" API access which is $100/month.
+So I don't think there is any usefulness to a project like this anymore.
+
 ![Python package](https://github.com/zonca/twitter_blocklist/workflows/Python%20package/badge.svg)
 [![PyPI version](https://badge.fury.io/py/twitter-blocklist.svg)](https://badge.fury.io/py/twitter-blocklist)
 
